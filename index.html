@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guan Huankang</title>
+    <title>PDF Viewer</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            width: 100%;
+            overflow: hidden;
         }
-        iframe {
+        .pdf-container {
+            width: 100%;
+            height: 100%;
+        }
+        object {
             width: 100%;
             height: 100%;
             border: none;
@@ -19,6 +23,10 @@
     </style>
 </head>
 <body>
-    <iframe src="guanhuankang.pdf" type="application/pdf"></iframe>
+    <div class="pdf-container">
+        <object data="guanhuankang.pdf" type="application/pdf">
+            <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="guanhuankang.pdf">click here to download the PDF file.</a></p>
+        </object>
+    </div>
 </body>
 </html>
